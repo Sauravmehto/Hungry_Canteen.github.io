@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Online Ordering</title>
+  <script src="https://use.fontawesome.com/7488f3a572.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery-3.4.1.min.js"></script> -->
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+
+
+
+
+
+      <link rel="stylesheet" href="css/stylee.css">
+
+
+
+      <style>
+
+        #submit {
+         background-color:  #d3325f;
+         padding: .5em;
+         border-radius: 50px;
+         color:white;
+
+         font-size: 20px;
+          text-decoration: none;
+         border: 3px solid #d3325f;
+        }
+
+        #submit:hover {
+         border: none;
+         background:  #d3325f;
+         box-shadow: 0px 0px 1px #777;
+         }
+h1 {
+  font-weight: bold;
+  margin: 0;
+
+}
+
+                     </style>
+
+</head>
+
+<body>
+    
+  <!-- Some images will show error in console due not having 'https' in the url,  nothing to worry about -->
+<input type="checkbox" id="cartToggle" name="toggle" />
+
+<!-- Menu -->
+<nav class="navbar">
+  <!-- <h2 id="logo">HUNGRY CANTEEN</h2> -->
+  
+  <a href="C:\Users\user\Desktop\inside-2\midd\index.html">
+    <img src="img/logo.jpg" height='50' width='50' class="rounded-circle " >
+  </a>
+  <a class="btnStyle popup-map" button id="submit" href="https://api.whatsapp.com/send?phone=917982837600" class="mr-2 primary-color">WhatsApp No. +91 7982837600</a>
+  
+  
+</nav><!-- End of Navigation -->
+
+<div class="body-content">
+
+<!-- Cart -->
+<nav class="cart">
+  <h3>List of orders: <span>Rs.0</span></h3>
+  <ol id="listOfOrders">
+  </ol>
+  <a class="btnStyle btnStyle3 finishOrder">Finish Order</a>
+</nav>
+
+  <div class="recipe-menu">
+
+    <!-- Recipe 1 -->
+    <div class="recipe">
+      <p class="name">Fish Curry</p>
+      <img src="img/hamburger.jpg">
+      
+      <p class="price"><span>Rs. </span>200</p>
+      <div id="checkOrderFish Curry" title="Fish Curry">
+        <h3 class="listHeading">List of Ingredients:</h3>
+        <ul class="listOfIngredients" id="recipe1">
+          <li><input type="checkbox" checked>Fish</li>
+          <li><input type="checkbox" checked>Gravy</li>
+          <li><input type="checkbox" checked>Onion</li>
+
+      </div>
+    </div>
+
+    <!-- Recipe 2 -->
+    <div class="recipe">
+      <p class="name">Jeera Rice</p>
+      <img src="img/momo.jpg">
+      
+      <p class="price"><span>Rs. </span>70</p>
+      <div id="checkOrderJeera Rice" title="Jeera Rice">
+        <h3 class="listHeading">List of Ingredients:</h3>
+        <ul class="listOfIngredients" id="recipe2">
+          <li><input type="checkbox" checked>Fresh Rice</li>
+          <li><input type="checkbox" checked>Jeera</li>
+          <li><input type="checkbox" checked>Coriander</li>
+
+        
+      </div>
+    </div>
+
+    <!-- Recipe 3 -->
+    <div class="recipe">
+      <p class="name">Boondi Rayta</p>
+      <img src="img/pizza.jpeg">
+   
+      <p class="price"><span>Rs. </span>30</p>
+      <div id="checkOrderBoondi Rayta" title="Boondi Rayta">
+        <h3 class="listHeading">List of Ingredients:</h3>
+        <ul class="listOfIngredients" id="recipe3">
+          <li><input type="checkbox" checked>Fresh Dahi</li>
+          <li><input type="checkbox" checked>Boondi</li>
+        
+      </div>
+    </div>
+
+    <!-- Recipe 4 -->
+    <div class="recipe">
+      <p class="name">Chicken Curry with Rice</p>
+      <img src="img/fries.jpg">
+    
+      <p class="price"><span>Rs. </span>250</p>
+      <div id="checkOrderChicken Curry with Rice" title="Chicken Curry with Rice">
+        <h3 class="listHeading">List of Ingredients:</h3>
+        <ul class="listOfIngredients" id="recipe4">
+          <li><input type="checkbox" checked>Chicken</li>
+          <li><input type="checkbox" checked>Rice</li>
+          <li><input type="checkbox" checked>Vegetables/Chicken</li>
+    
+      </div>
+    </div>
+
+    <!-- Recipe 5 -->
+    <div class="recipe">
+      <p class="name">Chicken Curry</p>
+      <img src="img/chowmien.jpg">
+      
+      <p class="price"><span> Rs. </span>200</p>
+      <div id="checkOrderChicken Curry" title="Chicken Curry">
+        <h3 class="listHeading">List of Ingredients:</h3>
+        <ul class="listOfIngredients" id="recipe5">
+          <li><input type="checkbox" checked>Chicken</li>
+          <li><input type="checkbox" checked>Gravy</li>
+          <li><input type="checkbox" checked>Vegetables/Chicken</li>
+          <li><input type="checkbox" checked>Onion</li>
+       
+      </div>
+    </div>
+
+    <!-- Recipe 6 -->
+    <div class="recipe">
+      <p class="name">Fish Curry With Rice</p>
+      <img src="img/biryani.jpg">
+">
+      
+      <p class="price"><span>Rs. </span>250</p>
+      <div id="checkOrderFish Curry With Rice" title="Fish Curry With Rice">
+        <h3 class="listHeading">List of Ingredients:</h3>
+        <ul class="listOfIngredients" id="recipe6">
+          <li><input type="checkbox" checked> Rice</li>
+          <li><input type="checkbox" checked>Fish Gravy</li>
+          <li><input type="checkbox" checked>Onion</li>
+       
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+				<div class="container"><div class="col m6 offset-m4 custom-select" style="margin-top: 100px;>
+  
+<div class="col m4 offset-m4 inText">
+							<p style="background-color:orange;">Order Your Food On My WhatsApp No.</p>
+
+						</div>
+<div class="col m4 offset-m4 inText">
+							<p style="background-color:yellow;">+91 7982837600</p>
+					</div>
+					
+					
+<div id="finishOrderDialog" title="Confirm Order">
+  <div id="finalOrderList">
+    <h3>Your Orders:</h3>
+    <ol></ol>
+  </div>
+  <div id="buyerInfo">
+    <input type="text" id="buyerName" placeholder="Enter Name">
+      <input type="phonenumber"  id="buyerNumber" minlength=10 placeholder="Enter Phone Number" required>
+      
+    
+    <input type="text" id="buyerAddress" placeholder="Enter Address">
+    
+    
+    
+    <!-- <a class="btnStyle locate" href="map.html">Show my location</a> -->
+  </div>
+</div>
+
+<!-- <div id="findme">
+  <a href="map.html">show my location</a>
+</div> -->
+
+<div id="thanksMessage">
+  <h1>Thank you for the order</h1> <br>
+  <h3>Your food will be delivered soon!</h3>
+  <img style = "float:left; margin-right : 200px; padding-left : 300px;" src="yummy.jfif" width="50" height="50">
+</div>
+
+ 
+
+
+    <script  src="Js/scriptt.js"></script>
+
+<script>
+
+$(document).ready(function() {
+            $('.popup-map').magnificPopup({
+                disableOn: 700,
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false
+            });
+            
+        }); 
+</script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
